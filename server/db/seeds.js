@@ -4,7 +4,7 @@ db.dropDatabase();
 db.bodyparts.insertMany(
     [
         {
-            object_name: "Brain"
+            Brain:
             {
                 name: "Brain",
                 diagram: "https://bam.files.bbci.co.uk/bam/live/content/z38cmsg/large",
@@ -18,12 +18,12 @@ db.bodyparts.insertMany(
                 quiz: {
                     quiz_question_one: "Is the brain made up of 4 main areas?",
                     quiz_answer_one: true,
-                    quiz_question_two: "",
-                    quiz_answer_two: "",
-                    quiz_question_three: "",
-                    quiz_answer_three: "",
-                    quiz_question_four: "",
-                    quiz_answer_four: "",
+                    quiz_question_two: "Does the cerebrum control the bodies temperature?",
+                    quiz_answer_two: false,
+                    quiz_question_three: "Does the Cerebellum control balance and muscular activity?",
+                    quiz_answer_three: true,
+                    quiz_question_four: "Is the hypothalamus the regulating centre for the body?",
+                    quiz_answer_four: true,
                 }
             }
         }
