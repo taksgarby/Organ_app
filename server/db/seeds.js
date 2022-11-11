@@ -15,6 +15,16 @@ db.bodyparts.insertMany(
                     "Medulla controls unconscious activities such as heart rate and breathing rate",
                     "Hypothalamus is the regulating centre for temperature and water balance for the body",
                 }
+                quiz: {
+                    quiz_question_one: "Is the brain made up of 4 main areas?",
+                    quiz_answer_one: true,
+                    quiz_question_two: "",
+                    quiz_answer_two: "",
+                    quiz_question_three: "",
+                    quiz_answer_three: "",
+                    quiz_question_four: "",
+                    quiz_answer_four: "",
+                }
             }
         }
     ]
