@@ -14,7 +14,7 @@ db.bodyparts.insertMany(
                     "Cerebellum controls balance, co-ordination of movement and muscular activity.",
                     "Medulla controls unconscious activities such as heart rate and breathing rate",
                     "Hypothalamus is the regulating centre for temperature and water balance for the body",
-                }
+                },
                 quiz: {
                     quiz_question_one: "Is the brain made up of 4 main areas?",
                     quiz_answer_one: true,
