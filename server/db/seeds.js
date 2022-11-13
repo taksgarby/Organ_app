@@ -27,32 +27,56 @@ db.bodyparts.insertMany(
                 }
             }
         },
-{
-        lungs:
         {
-           name: "lungs",
-           diagram: "https://ichef.bbci.co.uk/images/ic/448xn/p08vwby2.png",
-           facts: {
-                0: "When you breathe in, air travels down into your alveoli.",
-                1: "Lungs release waste gases back into the environment - called expiration.",
-                2: "Carbon dioxide is produced as a waste product of respiration",
-                3: "It travels all around your body in your bloodstream and is delivered to every cell where it is used for respiration to provide you with energy.",
-                4: "An average person breathes in around 11,000 liters of air every day."
-           },
-           
-           quiz: {
-           quiz_question_one: "The air you inhale travels down into alveoli.",
-           quiz_answer: true, 
-           quiz_question_two:"An average person breathes in around 100 liters of air per day.",
-           quiz_answer_two: false,
-           quiz_question_three: "Expiration is the act of breathing in oxigen.",
-           quiz_answer_three: false,
-           quiz_question_four:"Carbon dioxide is produced as a result of respiration.",
-           quiz_answer_four: true
-           } 
+            lungs:
+            {
+                name: "lungs",
+                diagram: "https://ichef.bbci.co.uk/images/ic/448xn/p08vwby2.png",
+                facts: {
+                    0: "When you breathe in, air travels down into your alveoli.",
+                    1: "Lungs release waste gases back into the environment - called expiration.",
+                    2: "Carbon dioxide is produced as a waste product of respiration",
+                    3: "It travels all around your body in your bloodstream and is delivered to every cell where it is used for respiration to provide you with energy.",
+                    4: "An average person breathes in around 11,000 liters of air every day."
+                },
+
+                quiz: {
+                    quiz_question_one: "The air you inhale travels down into alveoli.",
+                    quiz_answer: true,
+                    quiz_question_two: "An average person breathes in around 100 liters of air per day.",
+                    quiz_answer_two: false,
+                    quiz_question_three: "Expiration is the act of breathing in oxigen.",
+                    quiz_answer_three: false,
+                    quiz_question_four: "Carbon dioxide is produced as a result of respiration.",
+                    quiz_answer_four: true
+                }
+            }
+        },
+        {
+
+            name: "Heart",
+            diagram: 'https://pmgbiology.files.wordpress.com/2015/02/heart.png',
+            facts: {
+                0: "A fist-sized organ that pumps blood throughout the body",
+                1: "The primary organ of the circulatory system",
+                1: "Contains four main sections, called chambers, made of muscles",
+                2: "The muscles are powered by electrical impulses",
+                3: "The brain and nervous system direct the heart's function"
+            },
+
+
+            quiz: {
+                quiz_question_one: "The heart has three chambers.",
+                quiz_answer_one: false,
+                quiz_question_two: "The heart is responsible for pumping blood throughout the body.",
+                quiz_answer_two: true,
+                quiz_question_three: "The heart is about the size of a fist.",
+                quiz_answer_three: true,
+                quiz_question_four: "The nervous system directs the heart's function.",
+                quiz_answer_four: true,
+            }
+
+
         }
-       }
-       ])
 
-
-    
+    ])
