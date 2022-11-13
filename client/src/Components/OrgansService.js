@@ -1,8 +1,14 @@
-const baseURL = 'http://localhost:9000/api/bodyparts'
+const baseURL = 'http://localhost:9000/api/bodyparts/'
 
 export const getOrgans = () => {
     return fetch(baseURL)
     .then(res => res.json())
+}
+
+export const organById = (id) => {
+    return fetch(baseURL + id)
+    .then(res => res.json())
+    
 }
 
 export const postOrgans = (data) => {
