@@ -3,8 +3,6 @@ db.dropDatabase();
 
 db.bodyparts.insertMany(
     [
-        {
-            Brain:
             {
                 name: "Brain",
                 diagram: "https://bam.files.bbci.co.uk/bam/live/content/z38cmsg/large",
@@ -25,10 +23,7 @@ db.bodyparts.insertMany(
                     quiz_question_four: "Is the hypothalamus the regulating centre for the body?",
                     quiz_answer_four: true,
                 }
-            }
-        },
-{
-        lungs:
+            },
         {
            name: "lungs",
            diagram: "https://ichef.bbci.co.uk/images/ic/448xn/p08vwby2.png",
@@ -51,7 +46,6 @@ db.bodyparts.insertMany(
            quiz_answer_four: true
            } 
         }
-       }
        ])
 
 
