@@ -44,7 +44,6 @@ db.bodyparts.insertMany(
                     quiz_question_four: "Carbon dioxide is produced as a result of respiration.",
                     quiz_answer_four: true
                 }
-            }
         },
         {
 
