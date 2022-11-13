@@ -3,8 +3,6 @@ db.dropDatabase();
 
 db.bodyparts.insertMany(
     [
-        {
-            Brain:
             {
                 name: "Brain",
                 diagram: "https://bam.files.bbci.co.uk/bam/live/content/z38cmsg/large",
@@ -25,21 +23,17 @@ db.bodyparts.insertMany(
                     quiz_question_four: "Is the hypothalamus the regulating centre for the body?",
                     quiz_answer_four: true,
                 }
-            }
-        },
+            },
         {
-            lungs:
-            {
-                name: "lungs",
-                diagram: "https://ichef.bbci.co.uk/images/ic/448xn/p08vwby2.png",
-                facts: {
-                    0: "When you breathe in, air travels down into your alveoli.",
-                    1: "Lungs release waste gases back into the environment - called expiration.",
-                    2: "Carbon dioxide is produced as a waste product of respiration",
-                    3: "It travels all around your body in your bloodstream and is delivered to every cell where it is used for respiration to provide you with energy.",
-                    4: "An average person breathes in around 11,000 liters of air every day."
-                },
-
+           name: "lungs",
+           diagram: "https://ichef.bbci.co.uk/images/ic/448xn/p08vwby2.png",
+           facts: {
+                0: "When you breathe in, air travels down into your alveoli.",
+                1: "Lungs release waste gases back into the environment - called expiration.",
+                2: "Carbon dioxide is produced as a waste product of respiration",
+                3: "It travels all around your body in your bloodstream and is delivered to every cell where it is used for respiration to provide you with energy.",
+                4: "An average person breathes in around 11,000 liters of air every day."
+           },
                 quiz: {
                     quiz_question_one: "The air you inhale travels down into alveoli.",
                     quiz_answer: true,
