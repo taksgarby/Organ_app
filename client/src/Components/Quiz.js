@@ -1,34 +1,43 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { getOrgans, organById } from "./OrgansService.js";
+import { organById } from "./OrgansService.js";
+import Button from './Re-usable/Button.js';
+import Questions from "./Re-usable/Questions.js";
+import Answers from "./Re-usable/Answers.js";
 
 const Quiz = () => {
-    const [questions, setQuestions] = useState([]);
+    const [quiz, setQuiz] = useState([]);
     const { id } = useParams()
 
     useEffect (() => {
         organById(id)
         .then((info) => {
-            setQuestions(info.quiz) 
+            setQuiz(info.quiz) 
         }
        )
     },[id]);
 
-    if (!questions) {return null}
+    if (!quiz) {return "Sorry loading Questions!"}
 
-    const questionList = questions.map(question =>{
+    const questionList = quiz.map((the, index) => {
         return (
-            <div>
-                <h3>Questions: {question.question}</h3>
-                <h3>Answers: {question.answer ? "True": "False"}</h3>
-            </div>
-        )
+            <div key={index}>
+                <div>
+                    <Questions the={the}/>
+
+                </div>
+                    <form>
+                <div>
+                    <Answers the={the}/>
+                 </div> 
+                     </form>
+             </div>
+         )
     })
 
     return ( 
         <>
-        <h3>{questionList}</h3>
-        
+            {questionList}
         </>
      );
 }
