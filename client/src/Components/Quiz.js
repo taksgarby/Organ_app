@@ -20,7 +20,7 @@ const Quiz = () => {
         return (
             <div>
                 <h3>Questions: {question.question}</h3>
-                <h3>Answers: {question.answer}</h3>
+                <h3>Answers: {question.answer ? "True": "False"}</h3>
             </div>
         )
     })
