@@ -5,14 +5,13 @@ import { organById } from './OrgansService.js'
 import { useParams } from "react-router-dom";
 import OrganSelect from "./OrganSelect";
 
-const OrganList = ({organs, fetchOrganId}) => {
-    // const { id } = useParams()
+const OrganList = ({organs}) => {
 
     const organList = organs.map(organ => {
         
         return (
             <div key={organ._id}>
-            <Link to="/:id"><Button onClick={() => fetchOrganId(organ._id)} text={organ.name} value={organ._id}/></Link>
+            <Link to= {organ._id}><Button text={organ.name} value={organ._id}/></Link>
         </div>)
     })
 
