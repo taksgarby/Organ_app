@@ -9,14 +9,26 @@ const Quiz = () => {
     useEffect (() => {
         organById(id)
         .then((info) => {
-            setQuestions(info) 
+            setQuestions(info.quiz) 
         }
        )
     },[id]);
 
+    if (!questions) {return null}
+
+    const questionList = questions.map(question =>{
+        return (
+            <div>
+                <h3>Questions: {question.question}</h3>
+                <h3>Answers: {question.answer}</h3>
+            </div>
+        )
+    })
+
     return ( 
         <>
-        <h1>{questions.name}</h1>
+        <h3>{questionList}</h3>
+        
         </>
      );
 }
