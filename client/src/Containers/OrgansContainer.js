@@ -31,10 +31,10 @@ const OrgansContainer = () => {
 
                     <Route exact path="/" element={<OrganList organs={organs} />}/>
                     <Route path="/:id" element={<OrganSelect/>}/>
-                    
+                    <Route path="/quiz" organs={organs} element={<Quiz/>}/>
 
                     </Routes>
-                <Quiz organs={organs}/>
+                
         </Router>
      );
 }
