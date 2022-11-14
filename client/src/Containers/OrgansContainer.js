@@ -26,8 +26,9 @@ const OrgansContainer = () => {
     return ( 
         <Router>
             <Header />
+            <NavBar/>
             <Heading text="Educational Organ Webpage"/>
-                <NavBar/>
+         
                 
                 <Routes>
 
