@@ -24,7 +24,7 @@ const OrganSelect = () => {
                 <img src={organ.diagram} alt="Organ-diagram" width="350"/>
             </div>
             <div>
-            <Link to="/quiz"><Button text="Start Quiz"/></Link>
+            <Link to={`/${organ._id}/quiz`}><Button text="Start Quiz"/></Link>
             </div>
         </div>
      );
