@@ -1,13 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-const OrganSelect = ({organs}) => {
+const OrganSelect = ({organ}) => {
+    
+    
     return ( 
         <div>
-            <li key={organs._id}>
-                <h2>{organs.name}</h2>
-                <img src={organs.diagram} alt="Organ-diagram" />
-                
-            </li>
+            <h2>{organ.name}</h2>
+            <img src={organ.diagram} alt="Organ-diagram" width="350"/>
         </div>
      );
 }
