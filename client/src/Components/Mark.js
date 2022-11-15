@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-    border: solid black;
+    border: solid purple;
     border-width: 1px;
-    width: 450px;
+    align-content: center;
+    
 `
 const Mark = ({quiz, mark}) => {
 

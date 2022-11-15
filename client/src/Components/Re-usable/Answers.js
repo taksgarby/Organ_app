@@ -5,8 +5,8 @@ const Answers = ({quiz, current, handleButtonClick}) => {
 
     return ( 
         <>
-            <Button value={quiz[current].answer} onClick={() => handleButtonClick(quiz[current].answer)} text={`Correct answer: ${quiz[current].answer}`}/>
-            <Button value={!quiz[current].answer} onClick={() => handleButtonClick()} text={`Wrong answer: ${!quiz[current].answer}`}/> 
+            <Button value={quiz[current].answer} color="green" onClick={() => handleButtonClick(quiz[current].answer)} text={`Correct answer: ${quiz[current].answer}`}/>
+            <Button value={!quiz[current].answer} color="red" onClick={() => handleButtonClick()} text={`Wrong answer: ${!quiz[current].answer}`}/> 
         </>
      );
 }
