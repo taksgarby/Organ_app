@@ -6,29 +6,29 @@ const Button = ({text, value, color, onClick, isDisabled=false}) => {
 
     
     useEffect (() => {
-    }, [onClick, isActive]);  
+    }, [onClick]);  
     
-    console.log(isActive);
-    console.log(onClick);
 
-
-
-        //const changeColour = () => {
-        //      if (onClick) {
-        //      setisActive(true)
-        //  } 
-    //}
+    const changeColour = () => {
+        
+        setisActive(!isActive);
+    }; 
+    
         
        
-        
-    
 
     const Button = styled.button`
         background-color: ${(props) => isActive ? props.color : "white"};
+        margin: 5px;
+        padding: 1em;
+        border-radius: 1em;
+        &:hover {
+    background: purple;
+  }
     `  
-    // If clicked border prop green or red
+
     return ( 
-        <Button disabled={isDisabled} color={color} value={value} onClick={onClick}>{text}</Button>
+        <Button disabled={isDisabled} color={color} value={value} onClick={()=> onClick() || changeColour()}>{text}</Button>
      );
 }
  
