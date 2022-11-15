@@ -14,24 +14,27 @@ const Quiz = () => {
     useEffect (() => {
         organById(id)
         .then((info) => {
-            console.log(setQuiz(info.quiz)) 
+            setQuiz(info.quiz) 
         }
        )
-    }, [id]);
+    }, [id, current]);
 
     
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
+    const handleButtonClick = () => {
+        const next = current +1;
+        setCurrent(next);
+    }
+
     return ( 
         <div>
-            <form action="">
                 <div>
                     <Questions quiz={quiz} current={current}/>
                 </div>
                 <div>
-                    <Answers quiz={quiz} current={current}/>
+                    <Answers quiz={quiz} current={current} handleButtonClick={handleButtonClick}/>
                 </div>
-            </form>
         </div>
      );
 }
