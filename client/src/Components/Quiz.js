@@ -6,7 +6,8 @@ import Answers from "./Re-usable/Answers.js";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
-    const [score, setScore] = useState([]); 
+    const [current, setCurrent] = useState(0);
+    const [score, setScore] = useState(0); 
 
     const { id } = useParams()
 
@@ -25,10 +26,10 @@ const Quiz = () => {
         <div>
             <form action="">
                 <div>
-                    <Questions quiz={quiz}/>
+                    <Questions quiz={quiz} current={current}/>
                 </div>
                 <div>
-                    <Answers quiz={quiz}/>
+                    <Answers quiz={quiz} current={current}/>
                 </div>
             </form>
         </div>
