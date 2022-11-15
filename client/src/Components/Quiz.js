@@ -44,7 +44,8 @@ const Quiz = () => {
     return ( 
         <div>
                 {questionList}
-                <h1>{questionOne}</h1>
+                {/* <h1><Questions quiz={quiz}/></h1> */}
+
         </div>
      );
 }
