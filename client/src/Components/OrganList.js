@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { organById } from './OrgansService.js'
 import { useParams } from "react-router-dom";
 import OrganSelect from "./OrganSelect";
-
+import Heading from "./Heading";
 
 const InputImg = styled.input`
 height: 25px;
@@ -38,6 +38,8 @@ const OrganList = ({ organs }) => {
 
     return (
         <section>
+        <Heading text = {"Welcome!"}/>
+      
             <h2>Choose your organ:</h2>
             <ul>
                 {organList}

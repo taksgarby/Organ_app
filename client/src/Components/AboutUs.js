@@ -44,7 +44,7 @@ const AboutUs = ({contributers}) => {
 
         
             {eachPerson}
-=======
+
        
 
         </FlexContainer>

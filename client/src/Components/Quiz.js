@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { organById } from "./OrgansService.js";
 import Questions from "./Re-usable/Questions.js";
 import Answers from "./Re-usable/Answers.js";
+import Heading from "./Heading.js";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
@@ -43,6 +44,7 @@ const Quiz = () => {
 
     return ( 
         <div>
+                    <Heading text = {"Welcome to Quiz Page"}/>
                 {questionList}
                 {/* <h1><Questions quiz={quiz}/></h1> */}
 

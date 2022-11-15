@@ -4,6 +4,7 @@ import { getOrgans, organById } from "./OrgansService.js";
 import Button from "./Re-usable/Button.js";
 import BulletPoints from "./Re-usable/BulletPoints.js";
 import { Link } from "react-router-dom";
+import Heading from "./Heading.js";
 
 const OrganSelect = () => {
     const [organ, setOrgan] = useState({});
@@ -21,6 +22,7 @@ const OrganSelect = () => {
 
     return (
         <div>
+            <Heading text={`Welcome to ${organ.name} Page`} />
             <div>
                 <h2>{organ.name}</h2>
                 <img src={organ.diagram} alt="Organ-diagram" width="350"/>

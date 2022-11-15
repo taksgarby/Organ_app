@@ -27,18 +27,17 @@ const OrgansContainer = () => {
 
     }, [])
 
-    
+     
 
     return ( 
         <Router>
             <Header />
             <NavBar/>
-            <Heading text="Educational Organ Webpage"/>
-         
-                
+       
+
                 <Routes>
 
-                    <Route exact path="/" element={<OrganList organs={organs} />}/>
+                    <Route exact path="/" element={<OrganList organs={organs}/>}/>
                     <Route path="/:id" element={<OrganSelect/>}/>
                     <Route path="/:id/quiz" element={<Quiz/>}/>
 
