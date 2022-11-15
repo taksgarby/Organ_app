@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "../Components/NavBar.js";
 import OrganSelect from "../Components/OrganSelect.js";
 import Quiz from "../Components/Quiz.js";
+import Header from "../Components/Re-usable/Header.js";
 
 
 const OrgansContainer = () => {
@@ -24,8 +25,10 @@ const OrgansContainer = () => {
 
     return ( 
         <Router>
+            <Header />
+            <NavBar/>
             <Heading text="Educational Organ Webpage"/>
-                <NavBar/>
+         
                 
                 <Routes>
 
