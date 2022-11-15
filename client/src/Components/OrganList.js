@@ -8,7 +8,7 @@ import OrganSelect from "./OrganSelect";
 
 
 const InputImg = styled.input`
-height: 25px;
+height: 35px;
 padding: 2px;
 margin: 10px;
 `
@@ -18,6 +18,16 @@ display: flex;
 justify-content: center;
 align-item: center;
 `
+const Paragraph = styled.p`
+ font-family: Helvetica;
+ font-weight: Bold;
+ justify-content: center;
+ box-sizing: content-box;
+ width: 10%;
+ border: solid #f5c7f7 5px;
+ padding: 10px;
+ `
+
 
 const OrganList = ({ organs }) => {
 
@@ -29,7 +39,7 @@ const OrganList = ({ organs }) => {
                     <InputImg type="image" value={organ._id} name={organ.id} src={organ.icon} />
 
                 </Link>
-                <p>{organ.name}</p>
+                <Paragraph>{organ.name}</Paragraph>
             </ButtonDiv>)
     })
 
