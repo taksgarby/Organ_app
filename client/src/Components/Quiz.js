@@ -24,8 +24,12 @@ const Quiz = () => {
 
     const handleButtonClick = () => {
         const next = current +1;
-        setCurrent(next);
-    }
+        if (next < quiz.length) {
+            setCurrent(next);
+        } else {
+            alert("Well done you finished the quiz!")
+        };
+        };
 
     return ( 
         <div>
