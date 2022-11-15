@@ -28,7 +28,7 @@ const NavBar = () => {
                     <a href="https://www.bbc.co.uk/bitesize/topics/zmjtb9q">BBC Bitesize</a>
                 </li>
                 <li>
-                    <Link to="/">About Us</Link>
+                    <Link to="/AboutUs">About Us</Link>
                 </li>
                 </NavList>
             </ul>
