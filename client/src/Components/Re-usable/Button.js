@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
 const Button = ({text, value, color, onClick, isDisabled=false}) => {
-    const [isActive, setisActive] = useState(false);
+    const [isActive, setisActive] = useState(null);
 
     
     useEffect (() => {
@@ -18,7 +18,7 @@ const Button = ({text, value, color, onClick, isDisabled=false}) => {
        
 
     const Button = styled.button`
-        background-color: ${(props) => isActive ? props.color : "white"};
+        background-color: ${(props) => isActive ? props.color : "cream"};
         margin: 5px;
         padding: 1em;
         border-radius: 1em;
