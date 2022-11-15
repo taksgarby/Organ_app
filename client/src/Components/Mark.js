@@ -1,10 +1,9 @@
 import React from "react";
 
-const Mark = ({quiz, mark, showMark}) => {
+const Mark = ({quiz, mark}) => {
 
-    const giveResults = () => {
+        
 
-    }
     return ( 
         <>
             <div>

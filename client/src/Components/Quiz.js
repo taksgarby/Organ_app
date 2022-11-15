@@ -39,17 +39,22 @@ const Quiz = () => {
 
     return ( 
         <div>
-            
+            { showMark ? (
                 <div>
                     <Mark quiz={quiz} mark={mark} showMark={showMark} />
                 </div>
-                <div>
-                    <Questions quiz={quiz} current={current}/>
-                </div>
-                <div>
-                    <Answers quiz={quiz} current={current} handleButtonClick={handleButtonClick}/>
-                </div>
-           
+                ) : (
+                <>
+                    <div>
+                        <Questions quiz={quiz} current={current}/>
+                    </div>
+                    <div>
+                        <Answers quiz={quiz} current={current} handleButtonClick={handleButtonClick}/>
+                        
+                    </div>
+                </>
+                
+           )}
         </div>
      );
 }

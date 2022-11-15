@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import styled from "styled-components";
 
 const Button = ({text, value, onClick, isDisabled=false}) => {
-
-    // State 
+    const [colour, setColour] = useState([]);
     // Prop colour
     // If clicked border prop green or red
     return ( 
