@@ -98,3 +98,26 @@ db.bodyparts.insertMany(
         }
 
     ])
+
+    db.contributers.insertMany([
+        {
+            name: "Sara Qureshi",
+            Hometown: "Redditch, just outside Birmingham, England",
+            FavouriteFood: "Too many to choose from! Depends on the cuisine.",
+            MoreInfo: "Portfolio URL comes here" 
+        },
+        {            
+            name: "Dahlia Valle Peterson",
+            Hometown: "California, USA",
+            FavouriteFood: "Thai cuisine",
+            MoreInfo: "https://www.linkedin.com/in/dahliavp/" 
+        },
+        {
+            name: "Takako Onozuka",
+            Hometown: "Niigata, Japan",
+            FavouriteFood: "My current favourite is Korean cuisine",
+            MoreInfo: "Watch this space" 
+
+        }
+    ]
+    )

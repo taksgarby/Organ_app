@@ -3,7 +3,21 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
-const AboutUs = () => {
+const AboutUs = ({contributers}) => {
+
+
+    const eachPerson = contributers.map(contributer => {
+        return (
+            <div key = {contributer._id}>
+                <p>Name: {contributer.name}</p>
+                <p>Hometown: {contributer.Hometown}</p>
+                <p>Favourite Food: {contributer.FavouriteFood}</p>
+                <p>Find more about {contributer.name}: <a href={contributer.MoreInfo}>{contributer.MoreInfo}</a></p>
+                <hr></hr>
+            </div>
+        )
+    })
+
 
     const HeaderTwo = styled.p`
         margin: 2em;
@@ -27,22 +41,12 @@ const AboutUs = () => {
         <HeaderTwo>Contributers</HeaderTwo>
         <FlexContainer>
         <div>We are a hardworking team from diverse background </div>
-        <div>Sara Qureshi
-            Hometown: Redditch, just outside Birmingham, England.
-            Favourite Food: Too many to choose from! Depends on the cuisine.
-            Find out more about Sara on: Sara's portfolio url
-             
-        </div>
-        <div>Dahlia Valle Peterson
-            Hometown: California, USA
-            Favourite Food: Thai cuisine
-            Find out more about Dahlia on: Darhlia's linkedin url
-        </div>
-        <div>Takako Onozuka
-            Hometown: Niigata, Japan
-            Favourite Food: My current favourite is Korean
-            
-            </div>  
+
+        
+            {eachPerson}
+=======
+       
+
         </FlexContainer>
 
         </>
