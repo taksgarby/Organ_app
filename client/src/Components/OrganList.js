@@ -1,31 +1,49 @@
 import React from "react";
 import Button from "./Re-usable/Button";
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
+import styled from "styled-components";
 import { organById } from './OrgansService.js'
 import { useParams } from "react-router-dom";
 import OrganSelect from "./OrganSelect";
 
-const OrganList = ({organs}) => {
+
+const InputImg = styled.input`
+height: 25px;
+padding: 2px;
+margin: 10px;
+`
+
+const ButtonDiv = styled.div`
+display: flex;
+justify-content: center;
+align-item: center;
+`
+
+const OrganList = ({ organs }) => {
 
     const organList = organs.map(organ => {
-        
+
         return (
-            <div key={organ._id}>
-            <Link to= {organ._id}><Button text={organ.name} value={organ._id}/></Link>
-        </div>)
+            <ButtonDiv key={organ._id}>
+                <Link to={organ._id}>
+                    <InputImg type="image" value={organ._id} name={organ.id} src={organ.icon} />
+
+                </Link>
+                <p>{organ.name}</p>
+            </ButtonDiv>)
     })
 
 
 
 
-    return ( 
+    return (
         <section>
             <h2>Choose your organ:</h2>
-                <ul>
-                    {organList}
-                </ul>
+            <ul>
+                {organList}
+            </ul>
         </section>
-     );
+    );
 }
- 
+
 export default OrganList;
