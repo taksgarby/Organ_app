@@ -6,19 +6,23 @@ import Answers from "./Re-usable/Answers.js";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
-    const [score, setScore] = useState(); 
+    const [score, setScore] = useState([]); 
 
     const { id } = useParams()
 
     useEffect (() => {
         organById(id)
         .then((info) => {
-            setQuiz(info.quiz) 
+            console.log(setQuiz(info.quiz)) 
         }
        )
-    },[id]);
+    }, [id]);
 
-    if (!quiz) {return "Sorry loading Questions!"}
+    
+    if (!quiz.length > 0) {return "Sorry loading Questions!"}
+
+    const questionOne = quiz[0].question;
+
 
     const questionList = quiz.map((the, index) => {
         return (
@@ -28,6 +32,7 @@ const Quiz = () => {
                     <Questions the={the}/>
 
                 </div>
+
                 <div>
                     <Answers the={the}/>
                  </div> 
@@ -39,6 +44,7 @@ const Quiz = () => {
     return ( 
         <div>
                 {questionList}
+                <h1>{questionOne}</h1>
         </div>
      );
 }
