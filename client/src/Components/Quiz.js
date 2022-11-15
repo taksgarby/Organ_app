@@ -25,7 +25,7 @@ const Quiz = () => {
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
     const handleButtonClick = (correctAnswer) => {
-        if (correctAnswer) {
+        if (correctAnswer === quiz[current].answer) {
         setMark(mark + 1)
        }
        
