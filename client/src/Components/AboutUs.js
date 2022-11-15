@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const AboutUs = ({contributers}) => {
 
+
     const eachPerson = contributers.map(contributer => {
         return (
             <div key = {contributer._id}>
@@ -16,6 +17,7 @@ const AboutUs = ({contributers}) => {
             </div>
         )
     })
+
 
     const HeaderTwo = styled.p`
         margin: 2em;
@@ -39,8 +41,12 @@ const AboutUs = ({contributers}) => {
         <HeaderTwo>Contributers</HeaderTwo>
         <FlexContainer>
         <div>We are a hardworking team from diverse background </div>
+
         
             {eachPerson}
+=======
+       
+
         </FlexContainer>
 
         </>
