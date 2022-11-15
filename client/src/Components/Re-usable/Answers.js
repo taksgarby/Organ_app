@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "./Button";
 
-const Answers = ({the}) => {
+const Answers = ({quiz}) => {
     return ( 
         <>
-            <Button value={the.answer} text={`Correct answer: ${the.answer}`}/>
-            <Button value={!the.answer} text={`Wrong answer: ${!the.answer}`}/> 
+            <Button value={quiz[0].answer} text={`Correct answer: ${quiz[0].answer}`}/>
+            <Button value={!quiz[0].answer} text={`Wrong answer: ${!quiz[0].answer}`}/> 
         </>
      );
 }

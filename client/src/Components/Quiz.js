@@ -21,31 +21,16 @@ const Quiz = () => {
     
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
-    const questionOne = quiz[0].question;
-
-
-    const questionList = quiz.map((the, index) => {
-        return (
-            <div key={index}>
-                    <form>
-                <div>
-                    <Questions the={the}/>
-
-                </div>
-
-                <div>
-                    <Answers the={the}/>
-                 </div> 
-                     </form>
-             </div>
-         )
-    })
-
     return ( 
         <div>
-                {questionList}
-                {/* <h1><Questions quiz={quiz}/></h1> */}
-
+            <form action="">
+                <div>
+                    <Questions quiz={quiz}/>
+                </div>
+                <div>
+                    <Answers quiz={quiz}/>
+                </div>
+            </form>
         </div>
      );
 }
