@@ -23,7 +23,7 @@ const Header = () => {
     <div>
     <Header>
         <HeaderGroup> 
-          <h1>Organ learning guide</h1>
+          <h1>Organ Learning Guide</h1>
         </HeaderGroup>
 
       {/* <nav>

@@ -33,7 +33,7 @@ db.bodyparts.insertMany(
                 ]
             },
         {
-           name: "lungs",
+           name: "Lungs",
            diagram: "https://ichef.bbci.co.uk/images/ic/448xn/p08vwby2.png",
            facts: [
                 "When you breathe in, air travels down into your alveoli.",

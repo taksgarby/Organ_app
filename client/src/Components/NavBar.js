@@ -9,7 +9,9 @@ const NavBar = () => {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        text-decoration: none;
+        list-style: none;
+        font-size: 1.5rem;
+        
 
 
     `
