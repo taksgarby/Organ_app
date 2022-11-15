@@ -7,6 +7,7 @@ import NavBar from "../Components/NavBar.js";
 import OrganSelect from "../Components/OrganSelect.js";
 import Quiz from "../Components/Quiz.js";
 import Header from "../Components/Re-usable/Header.js";
+import AboutUs from "../Components/AboutUs.js";
 
 
 const OrgansContainer = () => {
@@ -35,7 +36,7 @@ const OrgansContainer = () => {
                     <Route exact path="/" element={<OrganList organs={organs} />}/>
                     <Route path="/:id" element={<OrganSelect/>}/>
                     <Route path="/:id/quiz" element={<Quiz/>}/>
-                    <Route exact path="/About" />
+                    <Route exact path="/AboutUs" element={<AboutUs/>} />
 
                 </Routes>
                 
