@@ -1,14 +1,23 @@
 import React from "react";
+import styled from "styled-components";
+
+const Ul = styled.ul`
+list-style-type: square;
+text-align: left; 
+`
+const Li = styled.li`
+margin: 1.2em;
+`
 
 const BulletPoints = ({ facts }) => {
     if (!facts) { return null }
     const lielements = facts.map((fact, index) => {
-        return (<li key={index}>{fact} </li>)
+        return (<Li key={index}>{fact} </Li>)
     })
     return (
-        <ul>
+        <Ul>
             {lielements}
-        </ul>
+        </Ul>
     )
 }
 export default BulletPoints; 

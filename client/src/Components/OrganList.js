@@ -8,9 +8,12 @@ import OrganSelect from "./OrganSelect";
 import Heading from "./Heading";
 
 const InputImg = styled.input`
-height: 25px;
+height: 35px;
 padding: 2px;
 margin: 10px;
+&:hover {
+    background: purple;
+  }
 `
 
 const ButtonDiv = styled.div`
@@ -18,6 +21,16 @@ display: flex;
 justify-content: center;
 align-item: center;
 `
+const Paragraph = styled.p`
+ font-family: Helvetica;
+ font-weight: Bold;
+ justify-content: center;
+ box-sizing: content-box;
+ width: 10%;
+ border: solid #f5c7f7 5px;
+ padding: 10px;
+ `
+
 
 const OrganList = ({ organs }) => {
 
@@ -29,7 +42,8 @@ const OrganList = ({ organs }) => {
                     <InputImg type="image" value={organ._id} name={organ.id} src={organ.icon} />
 
                 </Link>
-                <p>{organ.name} Diagram</p>
+                <Paragraph>{organ.name}</Paragraph>
+
             </ButtonDiv>)
     })
 
@@ -38,8 +52,8 @@ const OrganList = ({ organs }) => {
 
     return (
         <section>
-        <Heading text = {"Welcome!"}/>
-      
+            <Heading text={"Welcome!"} />
+
             <h2>Choose your organ:</h2>
             <ul>
                 {organList}
