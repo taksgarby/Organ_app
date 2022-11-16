@@ -7,6 +7,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin: 0px;
+   
     
 `
 const Title = styled.div`
@@ -14,13 +15,14 @@ const Title = styled.div`
     display: block;
     margin: 50px;
     
-    height: 5em;
+    height: 70px;
     padding: 1px;
     box-sizing: border-box;
     font-weight: bold;
     font-size: 1.1em;
     background: rgb(207, 159, 255, 1);
     color: white;
+    
     
 `
 
@@ -29,14 +31,21 @@ const Card = styled.div`
     margin: 50px;
     box-shadow: 5px 5px 20px purple;
     overflow: hidden;
-    margin-bottom: -138px;
+    margin-bottom: -120px;
+    &:hover {
+        height: 220px;
+        bottom: 1px;
+        background: rgb(207, 159, 255, 1);
+    }
 `
 
 const Image = styled.img`
     height: 200px;
     width: 200px;
     border-radius: 3px;
-    
+    &:hover {
+        transform: scale(0.8) rotate(-3deg);
+    }
 
 `
 
