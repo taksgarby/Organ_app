@@ -5,6 +5,8 @@ import Questions from "./Re-usable/Questions.js";
 import Answers from "./Re-usable/Answers.js";
 import Mark from "./Mark.js";
 import Button from "./Re-usable/Button.js";
+import Heading from "./Heading.js";
+
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
@@ -50,6 +52,8 @@ const Quiz = () => {
 
     return ( 
         <div>
+           <Heading text = {"Welcome to Quiz Page"}/>
+
             { showMark ? (
                 <div>
                     <Mark quiz={quiz} mark={mark} showMark={showMark} />
