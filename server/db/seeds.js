@@ -17,22 +17,22 @@ db.bodyparts.insertMany(
             ],
             quiz: [
                 {
-                    question: "Is the brain made up of 4 main areas?",
+                    question: "The brain is made up of 4 main areas",
                     isAnswered: false,
                     answer: true
                 },
                 {
-                    question: "Does the cerebrum control the bodies temperature?",
+                    question: "The cerebrum controls the bodies temperature",
                     isAnswered: false,
                     answer: false 
                     },
                     {
-                    question: "Does the Cerebellum control balance and muscular activity?",
+                    question: "The Cerebellum controls balance and muscular activity",
                     isAnswered: false,
                     answer: true
                 },
                 {
-                    question: "Is the hypothalamus the regulating centre for the body?",
+                    question: "The hypothalamus is the regulating centre for the body",
                     isAnswered: false,
                     answer: true
                 }
