@@ -4,6 +4,7 @@ import { organById } from "./OrgansService.js";
 import Heading from "./Heading.js";
 import { Link } from "react-router-dom";
 import Button from "./Re-usable/Button";
+import styled from "styled-components";
 
 
 const Video = () => {
@@ -22,10 +23,14 @@ const Video = () => {
 
     
 
+    const Section = styled.div`
+    margin-bottom: 12em;
+  
+  `
 
 
     return ( 
-        <div>
+        <Section>
            <Heading text = {`Watch Video`}/>
            <div>
            <iframe width="560" height="315" 
@@ -35,7 +40,7 @@ const Video = () => {
            allowfullscreen></iframe>
            </div>
           <Link to={`/${id}/quiz`}><Button text="Test Your Knowledge"/></Link>
-        </div>
+        </Section>
      );
 }
 
