@@ -31,14 +31,13 @@ const Quiz = () => {
         if (correctAnswer === quiz[number].answer && mark < quiz.length) {
         setMark(mark + 1)
        }
-
        const updatedQuiz = [...quiz];
        const answerToUpdate = updatedQuiz[number]
        answerToUpdate.isAnswered = true;
        const index = updatedQuiz.indexOf(answerToUpdate);
        updatedQuiz.splice(index, 1, answerToUpdate);
-       setQuiz(updatedQuiz);
-       console.log(updatedQuiz);
+       setQuiz(updatedQuiz); 
+       
 
      
         };
