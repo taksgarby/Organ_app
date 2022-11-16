@@ -1,11 +1,11 @@
 import React from "react";
 
-const Questions = ({quiz, current}) => {
+const Questions = ({quiz, number}) => {
 
     return ( 
         <>
             <h2>Question:</h2>
-            <h3>{quiz[current].question}</h3>
+            <h3>{quiz[number].question}</h3>
         </>
      );
 }

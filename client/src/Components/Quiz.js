@@ -10,7 +10,7 @@ import Heading from "./Heading.js";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
-    const [current, setCurrent] = useState(0);
+    const [number, setNumber] = useState(0);
     const [mark, setMark] = useState(0); 
     const [showMark, setShowMark] = useState(false);
 
@@ -22,13 +22,13 @@ const Quiz = () => {
             setQuiz(info.quiz) 
         }
        )
-    }, [id, current]);
+    }, [id, number]);
 
     
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
     const handleButtonClick = (correctAnswer) => {
-        if (correctAnswer === quiz[current].answer && mark < quiz.length) {
+        if (correctAnswer === quiz[number].answer && mark < quiz.length) {
         setMark(mark + 1)
        }
        
@@ -41,10 +41,10 @@ const Quiz = () => {
         };
 
     const handleNextButton = () => {
-        const next = current +1;
+        const next = number +1;
 
         if (next < quiz.length) {
-            setCurrent(next);
+            setNumber(next);
         } else {
             setShowMark(true)
         };
@@ -61,10 +61,10 @@ const Quiz = () => {
                 ) : (
                     <>
                     <div>
-                        <Questions quiz={quiz} current={current}/>
+                        <Questions quiz={quiz} number={number}/>
                     </div>
                     <div>
-                        <Answers quiz={quiz} current={current} handleButtonClick={handleButtonClick}/>
+                        <Answers quiz={quiz} number={number} handleButtonClick={handleButtonClick}/>
                         
                     </div>
 

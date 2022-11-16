@@ -29,7 +29,7 @@ const OrganList = ({ organs }) => {
                     <InputImg type="image" value={organ._id} name={organ.id} src={organ.icon} />
 
                 </Link>
-                <p>{organ.name}</p>
+                <p>{organ.name} Diagram</p>
             </ButtonDiv>)
     })
 
