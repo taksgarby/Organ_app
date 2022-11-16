@@ -7,6 +7,7 @@ import NavBar from "../Components/NavBar.js";
 import OrganSelect from "../Components/OrganSelect.js";
 import Quiz from "../Components/Quiz.js";
 import Header from "../Components/Re-usable/Header.js";
+import Footer from "../Components/Footer.js";
 
 import { getContributers } from "../Components/ContributersService.js";
 import AboutUs from "../Components/AboutUs.js";
@@ -19,36 +20,37 @@ const OrgansContainer = () => {
 
     useEffect(() => {
         getOrgans()
-        .then((info) => 
-         setOrgans(info) 
-        )
+            .then((info) =>
+                setOrgans(info)
+            )
         getContributers()
-        .then((info)=> 
-        setContributers(info))
+            .then((info) =>
+                setContributers(info))
 
     }, [])
 
-     
 
-    return ( 
+
+    return (
         <Router>
             <Header />
-            <NavBar/>
-       
+            <NavBar />
 
-                <Routes>
 
-                    <Route exact path="/" element={<OrganList organs={organs}/>}/>
-                    <Route path="/:id" element={<OrganSelect/>}/>
-                    <Route path="/:id/quiz" element={<Quiz/>}/>
+            <Routes>
 
-                    <Route exact path="/AboutUs" element={<AboutUs contributers = {contributers}/>}/>
-                    <Route exact path="/AboutUs2" element={<AboutUs2 contributers = {contributers}/>}/>
+                <Route exact path="/" element={<OrganList organs={organs} />} />
+                <Route path="/:id" element={<OrganSelect />} />
+                <Route path="/:id/quiz" element={<Quiz />} />
 
-                </Routes>
-                
+                <Route exact path="/AboutUs" element={<AboutUs contributers={contributers} />} />
+                <Route exact path="/AboutUs2" element={<AboutUs2 contributers={contributers} />} />
+
+            </Routes>
+            <Footer></Footer>
+
         </Router>
-     );
+    );
 }
- 
+
 export default OrgansContainer;
