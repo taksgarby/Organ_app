@@ -43,6 +43,7 @@ const OrganList = ({ organs }) => {
 
                 </Link>
                 <Paragraph>{organ.name}</Paragraph>
+
             </ButtonDiv>)
     })
 
