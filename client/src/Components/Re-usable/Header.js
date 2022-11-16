@@ -1,6 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import OrgansContainer from "../../Containers/OrgansContainer";
+import { organById } from "../OrgansService";
 
 const Header = () => {
     const Header = styled.header`
@@ -17,12 +19,17 @@ const Header = () => {
     padding-bottom: 10px;
 
   `
-
+  // const InputIcon = styled.input`
+  //     margin: ${(props)=> props.margin}
+  //     height: ${(props)=> props.height}
+  //     padding: ${(props)=> props.padding}
+  // `
   return (
     <div>
     <Header>
         <HeaderGroup> 
-          <h1>Organ Learning Guide</h1>
+          <h1><img src='https://cdn-icons-png.flaticon.com/512/4556/4556999.png' width='45px' height='45px'></img> Organ  <img src='https://cdn-icons-png.flaticon.com/512/2492/2492923.png' width='45px' height='45px'></img>  Learning  <img src='https://cdn-icons-png.flaticon.com/512/7292/7292483.png' width='45px' height='45px'></img> Guide
+          </h1>
         </HeaderGroup>
 
       {/* <nav>
