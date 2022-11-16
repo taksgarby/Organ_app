@@ -48,7 +48,7 @@ const OrgansContainer = () => {
                 <Route path="/:id/video" element={<Video/>}/>
                    
              </Routes>
-             <Footer></Footer> 
+             <Footer/>
         </Router>
     );
 }

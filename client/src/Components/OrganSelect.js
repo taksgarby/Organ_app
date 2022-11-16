@@ -6,6 +6,7 @@ import BulletPoints from "./Re-usable/BulletPoints.js";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Heading from "./Heading.js";
+import Diagram from "./Re-usable/Diagram.js";
 
 const OrganSelect = () => {
     const [organ, setOrgan] = useState({});
@@ -25,9 +26,10 @@ const OrganSelect = () => {
         <div>
             <Heading text={`Welcome to ${organ.name} Page`} />
             <div>
-                <h2>{organ.name}</h2>
-                <img src={organ.diagram} alt="Organ-diagram" width="350" />
+                <h2>{organ.name} Diagram</h2>
 
+                <Diagram diagram={organ.diagram}/>
+                
                 <BulletPoints facts={organ.facts} />
 
             </div>
