@@ -4,6 +4,7 @@ import { getOrgans, organById } from "./OrgansService.js";
 import Button from "./Re-usable/Button.js";
 import BulletPoints from "./Re-usable/BulletPoints.js";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import Heading from "./Heading.js";
 
 const OrganSelect = () => {
@@ -25,11 +26,13 @@ const OrganSelect = () => {
             <Heading text={`Welcome to ${organ.name} Page`} />
             <div>
                 <h2>{organ.name}</h2>
-                <img src={organ.diagram} alt="Organ-diagram" width="350"/>
-                
+                <img src={organ.diagram} alt="Organ-diagram" width="350" />
+
                 <BulletPoints facts={organ.facts} />
+
             </div>
             <div>
+
             <Link to={`/${organ._id}/video`}><Button text="Watch Video"/></Link>
             <Link to={`/${organ._id}/quiz`}><Button text="Start Quiz"/></Link>
             </div>

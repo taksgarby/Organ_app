@@ -11,6 +11,9 @@ const InputImg = styled.input`
 height: 35px;
 padding: 2px;
 margin: 10px;
+&:hover {
+    background: purple;
+  }
 `
 
 const ButtonDiv = styled.div`
@@ -48,8 +51,8 @@ const OrganList = ({ organs }) => {
 
     return (
         <section>
-        <Heading text = {"Welcome!"}/>
-      
+            <Heading text={"Welcome!"} />
+
             <h2>Choose your organ:</h2>
             <ul>
                 {organList}
