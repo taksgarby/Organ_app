@@ -31,13 +31,16 @@ const Quiz = () => {
         if (correctAnswer === quiz[number].answer && mark < quiz.length) {
         setMark(mark + 1)
        }
-       
-        // const next = current +1;
-        // if (next < quiz.length) {
-        //     setCurrent(next);
-        // } else {
-        //     setShowMark(true)
-        // };
+
+       const updatedQuiz = [...quiz];
+       const answerToUpdate = updatedQuiz[number]
+       answerToUpdate.isAnswered = true;
+       const index = updatedQuiz.indexOf(answerToUpdate);
+       updatedQuiz.splice(index, 1, answerToUpdate);
+       setQuiz(updatedQuiz);
+       console.log(updatedQuiz);
+
+     
         };
 
     const handleNextButton = () => {
@@ -48,12 +51,13 @@ const Quiz = () => {
         } else {
             setShowMark(true)
         };
+
     }
 
     return ( 
         <div>
            <Heading text = {"Welcome to Quiz Page"}/>
-
+            
             { showMark ? (
                 <div>
                     <Mark quiz={quiz} mark={mark} showMark={showMark} />

@@ -1,22 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Button = ({text, value, color, onClick, isDisabled=false}) => {
-   
-
-    
-    useEffect (() => {
-    }, [onClick]);  
-    
-
-    const changeColour = () => {
-        
-    }; 
-    
-        
 
     const Button = styled.button`
-        background-color: ${(props) => props.color | "cream"};
+        
+        background-color: ${(props) => props.color};
         margin: 5px;
         padding: 1em;
         border-radius: 1em;
@@ -24,13 +13,10 @@ const Button = ({text, value, color, onClick, isDisabled=false}) => {
     background: purple;
   }
     `
-    const handleClick = () => {
-        onClick();
-            changeColour();
-    }  
+
 
     return ( 
-        <Button disabled={isDisabled} color={color} value={value} onClick={handleClick}>{text}</Button>
+        <Button disabled={isDisabled} color={color} value={value} onClick={onClick}>{text}</Button>
      );
 }
  

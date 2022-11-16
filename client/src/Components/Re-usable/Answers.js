@@ -21,8 +21,8 @@ const Answers = ({quiz, number, handleButtonClick}) => {
 
     return ( 
         <>
-            <Button value={quiz[number].answer} color="green" onClick={() => handleButtonClick(quiz[number].answer)} text={correct()}/>
-            <Button value={!quiz[number].answer} color="red" onClick={() => handleButtonClick()} text={incorrect()}/> 
+            <Button value={quiz[number].answer} color = {quiz[number].isAnswered ? "green" : null } onClick={() => handleButtonClick(quiz[number].answer)} text={correct()}/>
+            <Button value={!quiz[number].answer} color={!quiz[number].isAnswered ? null : "red"}  onClick={() => handleButtonClick()} text={incorrect()}/> 
         </>
      );
 }
