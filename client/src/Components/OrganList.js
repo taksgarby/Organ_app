@@ -30,7 +30,14 @@ const Paragraph = styled.p`
  border: solid #f5c7f7 5px;
  padding: 10px;
  `
+const HeaderTwo = styled.h2`
+color: #8A2BE2;
+`
 
+const Section = styled.div`
+  margin-bottom: 12em;
+
+`
 
 const OrganList = ({ organs }) => {
 
@@ -47,18 +54,18 @@ const OrganList = ({ organs }) => {
             </ButtonDiv>)
     })
 
-
+ 
 
 
     return (
-        <section>
+        <Section>
             <Heading text={"Welcome!"} />
 
-            <h2>Choose your organ:</h2>
+            <HeaderTwo>Choose your organ:</HeaderTwo>
             <ul>
                 {organList}
             </ul>
-        </section>
+        </Section>
     );
 }
 

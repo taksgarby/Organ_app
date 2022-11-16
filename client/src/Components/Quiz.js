@@ -6,7 +6,7 @@ import Answers from "./Re-usable/Answers.js";
 import Mark from "./Mark.js";
 import Button from "./Re-usable/Button.js";
 import Heading from "./Heading.js";
-
+import styled from "styled-components";
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
@@ -53,8 +53,12 @@ const Quiz = () => {
 
     }
 
+    const Section = styled.div`
+    margin-bottom: 12em; 
+  `
+
     return ( 
-        <div>
+        <Section>
            <Heading text = {"Welcome to Quiz Page"}/>
             
             { showMark ? (
@@ -77,7 +81,7 @@ const Quiz = () => {
                 </>
                 
                 )}
-        </div>
+        </Section>
      );
 }
  
