@@ -40,7 +40,14 @@ const ContributerName = styled.p`
     color: ${(props)=>props.color}
 
 `
+const KeyWord = styled.p`
+    color: ${(props)=> props.color}
+`
 
+const Answer = styled.p`
+    color: ${(props)=> props.color}
+
+`
 const AboutUs = ({contributers}) => {
 
 
@@ -48,12 +55,12 @@ const AboutUs = ({contributers}) => {
         return (
             <div key = {contributer._id}>
                 <ContributerName color="#27296d"><strong>{contributer.name}</strong></ContributerName>
-                <p>Hometown:</p>
-                    <p> {contributer.Hometown}</p>
-                <p>Favourite Food:</p>
-                <p>{contributer.FavouriteFood}</p>
-                <p>Find more about: </p>
-                <p><a href={contributer.MoreInfo}>{contributer.name}</a></p>
+                <KeyWord color='#5e63b6'>&#8962; Hometown &#8962;</KeyWord>
+                    <Answer color='#27296d'> {contributer.Hometown}</Answer>
+                <KeyWord color='#5e63b6'>&#9787; Favourite Food &#9787;</KeyWord>
+                <Answer color='#27296d'>  {contributer.FavouriteFood}</Answer>
+                <KeyWord color='#5e63b6'>&#9759; Find out more about &#9759;</KeyWord>
+                <Answer color='#27296d'> <a href={contributer.MoreInfo}>{contributer.name}</a></Answer>
      
             </div>
         )
