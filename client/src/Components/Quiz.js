@@ -3,51 +3,77 @@ import { useParams } from "react-router-dom";
 import { organById } from "./OrgansService.js";
 import Questions from "./Re-usable/Questions.js";
 import Answers from "./Re-usable/Answers.js";
+import Mark from "./Mark.js";
+import Button from "./Re-usable/Button.js";
 import Heading from "./Heading.js";
+
 
 const Quiz = () => {
     const [quiz, setQuiz] = useState([]);
-    const [score, setScore] = useState([]); 
+    const [current, setCurrent] = useState(0);
+    const [mark, setMark] = useState(0); 
+    const [showMark, setShowMark] = useState(false);
 
     const { id } = useParams()
 
     useEffect (() => {
         organById(id)
         .then((info) => {
-            console.log(setQuiz(info.quiz)) 
+            setQuiz(info.quiz) 
         }
        )
-    }, [id]);
+    }, [id, current]);
 
     
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
-    const questionOne = quiz[0].question;
+    const handleButtonClick = (correctAnswer) => {
+        if (correctAnswer === quiz[current].answer && mark < quiz.length) {
+        setMark(mark + 1)
+       }
+       
+        // const next = current +1;
+        // if (next < quiz.length) {
+        //     setCurrent(next);
+        // } else {
+        //     setShowMark(true)
+        // };
+        };
 
+    const handleNextButton = () => {
+        const next = current +1;
 
-    const questionList = quiz.map((the, index) => {
-        return (
-            <div key={index}>
-                    <form>
-                <div>
-                    <Questions the={the}/>
-
-                </div>
-
-                <div>
-                    <Answers the={the}/>
-                 </div> 
-                     </form>
-             </div>
-         )
-    })
+        if (next < quiz.length) {
+            setCurrent(next);
+        } else {
+            setShowMark(true)
+        };
+    }
 
     return ( 
         <div>
-                    <Heading text = {"Welcome to Quiz Page"}/>
-                {questionList}
-                {/* <h1><Questions quiz={quiz}/></h1> */}
+           <Heading text = {"Welcome to Quiz Page"}/>
 
+            { showMark ? (
+                <div>
+                    <Mark quiz={quiz} mark={mark} showMark={showMark} />
+                </div>
+                ) : (
+                    <>
+                    <div>
+                        <Questions quiz={quiz} current={current}/>
+                    </div>
+                    <div>
+                        <Answers quiz={quiz} current={current} handleButtonClick={handleButtonClick}/>
+                        
+                    </div>
+
+                    <div>
+                        <Button text="Next question" onClick={handleNextButton}/>
+                    </div>
+                </>
+                
+                )}
         </div>
      );
 }

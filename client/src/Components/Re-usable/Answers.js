@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "./Button";
 
-const Answers = ({the}) => {
+const Answers = ({quiz, current, handleButtonClick}) => {
+
     return ( 
         <>
-            <Button value={the.answer} text={`Correct answer: ${the.answer}`}/>
-            <Button value={!the.answer} text={`Wrong answer: ${!the.answer}`}/> 
+            <Button value={quiz[current].answer} color="green" onClick={() => handleButtonClick(quiz[current].answer)} text={quiz[current].answer ? "True" : "False"}/>
+            <Button value={!quiz[current].answer} color="red" onClick={() => handleButtonClick()} text={!quiz[current].answer ? "True" : "False"}/> 
         </>
      );
 }
