@@ -6,16 +6,17 @@ const Button = ({text, value, color, onClick, isDisabled=false}) => {
 
     
     useEffect (() => {
-    }, [onClick]);  
+    }, [onClick, isActive]);  
     
 
     const changeColour = () => {
-        
         setisActive(!isActive);
+        // const interval = setTimeout(() => {
+        //     setisActive(!isActive);
+        // }, 1000);
     }; 
     
         
-       
 
     const Button = styled.button`
         background-color: ${(props) => isActive ? props.color : "cream"};
@@ -25,10 +26,14 @@ const Button = ({text, value, color, onClick, isDisabled=false}) => {
         &:hover {
     background: purple;
   }
-    `  
+    `
+    const handleClick = () => {
+        onClick();
+            changeColour();
+    }  
 
     return ( 
-        <Button disabled={isDisabled} color={color} value={value} onClick={()=> onClick() || changeColour()}>{text}</Button>
+        <Button disabled={isDisabled} color={color} value={value} onClick={handleClick}>{text}</Button>
      );
 }
  

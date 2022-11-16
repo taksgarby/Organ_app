@@ -16,18 +16,22 @@ db.bodyparts.insertMany(
                 quiz: [
                     {
                     question: "Is the brain made up of 4 main areas?",
+                    isAnswered: false,
                     answer: true
                     },
                     {
                     question: "Does the cerebrum control the bodies temperature?",
-                    answer: false
+                    isAnswered: false,
+                    answer: false, 
                     },
                     {
                     question: "Does the Cerebellum control balance and muscular activity?",
+                    isAnswered: false,
                     answer: true
                     },
                     {
                     question: "Is the hypothalamus the regulating centre for the body?",
+                    isAnswered: false,
                     answer: true
                     }
                 ]
@@ -45,18 +49,22 @@ db.bodyparts.insertMany(
                 quiz: [
                     {
                     question: "The air you inhale travels down into alveoli.",
+                    isAnswered: false,
                     answer: true
                     },
                     {
                     question: "An average person breathes in around 100 liters of air per day.",
+                    isAnswered: false,
                     answer: false
                     }, 
                     {
                     question: "Expiration is the act of breathing in oxigen.",
+                    isAnswered: false,
                     answer: false
                     },
                     {
                     question: "Carbon dioxide is produced as a result of respiration.",
+                    isAnswered: false,
                     answer: true
                     }
                 ]
@@ -77,18 +85,22 @@ db.bodyparts.insertMany(
             quiz: [
                 {
                 question: "The heart has three chambers.",
+                isAnswered: false,
                 answer: false
                 },
                 {
                 question: "The heart is responsible for pumping blood throughout the body.",
+                isAnswered: false,
                 answer: true
                 },
                 {
                 question: "The heart is about the size of a fist.",
+                isAnswered: false,
                 answer: true,
                 },
                 {
                 question: "The nervous system directs the heart's function.",
+                isAnswered: false,
                 answer: true
                 }
             ]

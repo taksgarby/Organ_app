@@ -50,7 +50,6 @@ const Quiz = () => {
 
     return ( 
         <div>
-            <form action="">
             { showMark ? (
                 <div>
                     <Mark quiz={quiz} mark={mark} showMark={showMark} />
@@ -71,7 +70,6 @@ const Quiz = () => {
                 </>
                 
                 )}
-                </form>
         </div>
      );
 }
