@@ -32,7 +32,9 @@ const OrganSelect = () => {
 
             </div>
             <div>
-                <Link to={`/${organ._id}/quiz`}><Button text="Start Quiz" /></Link>
+
+            <Link to={`/${organ._id}/video`}><Button text="Watch Video"/></Link>
+            <Link to={`/${organ._id}/quiz`}><Button text="Start Quiz"/></Link>
             </div>
         </div>
     );
