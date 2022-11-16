@@ -7,10 +7,11 @@ import NavBar from "../Components/NavBar.js";
 import OrganSelect from "../Components/OrganSelect.js";
 import Quiz from "../Components/Quiz.js";
 import Header from "../Components/Re-usable/Header.js";
-
+import Video from "../Components/Video.js";
 import { getContributers } from "../Components/ContributersService.js";
 import AboutUs from "../Components/AboutUs.js";
-import AboutUs2 from "../Components/AboutUs2.js";
+
+
 
 
 const OrgansContainer = () => {
@@ -43,8 +44,8 @@ const OrgansContainer = () => {
                     <Route path="/:id/quiz" element={<Quiz/>}/>
 
                     <Route exact path="/AboutUs" element={<AboutUs contributers = {contributers}/>}/>
-                    <Route exact path="/AboutUs2" element={<AboutUs2 contributers = {contributers}/>}/>
-
+                    <Route path="/:id/video" element={<Video/>}/>
+                   
                 </Routes>
                 
         </Router>
