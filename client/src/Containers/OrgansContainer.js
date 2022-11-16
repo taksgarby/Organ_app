@@ -38,16 +38,14 @@ const OrgansContainer = () => {
         <Router>
             <Header />
             <NavBar />
-
-
             <Routes>
 
-                <Route exact path="/" element={<OrganList organs={organs} />} />
+                <Route exact path="/cards" element={<OrganList organs={organs} />} />
                 <Route path="/:id" element={<OrganSelect />} />
                 <Route path="/:id/quiz" element={<Quiz />} />
                 <Route exact path="/AboutUs" element={<AboutUs contributers = {contributers}/>}/>
                 <Route path="/:id/video" element={<Video/>}/>
-                <Route path="/cards" element={<Icons organs={organs}/>}/>   
+                <Route path="/" element={<Icons organs={organs}/>}/>   
              </Routes>
              <Footer></Footer> 
         </Router>
