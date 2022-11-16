@@ -1,20 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Heading from "./Heading";
 
 const Container = styled.div`
     display: inline-flex;
-    height: 50vh;
+    height: 40vh;
     align-items: center;
     justify-content: center;
     margin: 0px;
    
     
 `
+const Choose = styled.div`
+    font-weight: bold;
+    font-size: 2em;
+`
+
 const Title = styled.div`
     
     display: block;
     margin: 50px;
-    
     height: 70px;
     padding: 1px;
     box-sizing: border-box;
@@ -53,15 +59,17 @@ const Icons = ({organs}) => {
 
     const iconsList = organs.map((organ) => {
         return (
-            <>
-                <div>
-                    <Card>
-                        <Image src={organ.icon} alt="Organ-icon" />
-                    </Card>
-                    <Title>
-                        <h2>{organ.name}</h2>
-                    </Title>
-                </div>
+            <>  
+                <Link to={organ._id}>
+                    <div>
+                        <Card>
+                            <Image src={organ.icon} alt="Organ-icon" />
+                        </Card>
+                        <Title>
+                            <h2>{organ.name}</h2>
+                        </Title>
+                    </div>
+                </Link>
             </>
         )
 
@@ -69,6 +77,10 @@ const Icons = ({organs}) => {
 
     return ( 
         <>
+            <Heading text={"Welcome!"} />
+
+                <Choose>Choose your organ:</Choose>
+
             <Container>
                 {iconsList}
             </Container>
