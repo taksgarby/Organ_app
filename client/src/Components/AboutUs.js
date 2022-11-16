@@ -3,6 +3,43 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Heading from "./Heading";
 
+const HeaderTwo = styled.p`
+margin-bottom: 0;
+padding: 1em;
+color: #27296d;
+font-size: 2em;
+`
+
+const ParaText = styled.p`
+margin: 0;
+margin-left: 2rem;
+padding: 1em;
+font-size: 1.2rem;
+text-align: left;
+color: #27296d;
+`
+const SubHeader = styled.p`
+margin: 0;
+padding: 0;
+color: #5e63b6;
+font-size: 1.5em;
+`
+const FlexContainer = styled.div`
+box-sizing:border-box;
+width:100%;
+margin: 1em;
+border-style: outset;
+
+padding:20px;
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+font-size: 1.3em;
+`
+const ContributerName = styled.p`
+    color: ${(props)=>props.color}
+
+`
 
 const AboutUs = ({contributers}) => {
 
@@ -10,46 +47,20 @@ const AboutUs = ({contributers}) => {
     const eachPerson = contributers.map(contributer => {
         return (
             <div key = {contributer._id}>
-                <p><strong>{contributer.name}</strong></p>
-                <p>Hometown: {contributer.Hometown}</p>
-                <p>Favourite Food: {contributer.FavouriteFood}</p>
-                <p>Find more about {contributer.name}: <a href={contributer.MoreInfo}>{contributer.MoreInfo}</a></p>
-                <hr></hr>
+                <ContributerName color="#27296d"><strong>{contributer.name}</strong></ContributerName>
+                <p>Hometown:</p>
+                    <p> {contributer.Hometown}</p>
+                <p>Favourite Food:</p>
+                <p>{contributer.FavouriteFood}</p>
+                <p>Find more about: </p>
+                <p><a href={contributer.MoreInfo}>{contributer.name}</a></p>
+     
             </div>
         )
     })
 
 
-    const HeaderTwo = styled.p`
-        margin-bottom: 0;
-        padding: 1em;
-        color: #27296d;
-        font-size: 2em;
-    `
-
-    const ParaText = styled.p`
-        margin: 0;
-        margin-left: 2rem;
-        padding: 1em;
-        font-size: 1.2rem;
-        text-align: left;
-        color: #27296d;
-    `
-    const SubHeader = styled.p`
-        margin: 0;
-        padding: 0;
-        color: #5e63b6;
-        font-size: 1em;
-    `
-    const FlexContainer = styled.div`
-        display: flex;
-        flex-direction: column;
-        margin-left: 15%;
-        margin-right: 15%;
-        text-align: left;
-        color: #27296d;
-        font-size: 1.2rem;
-    `
+  
 
 
     return ( 
@@ -57,19 +68,17 @@ const AboutUs = ({contributers}) => {
         <Heading text={"About Us"}/>
         <HeaderTwo>About this app</HeaderTwo>
         <ParaText>
-           We are commited to educating young people in the field of biology. We came up with the idea of this web app
-           during discussion about how to get young people more excited about learning basic facts about our own body. We believe this 
-           interactive website will engage and educate the future of our generation.  
+        We have created an app for BBC Bitesize that will teach children about organs. Our target audience is children aged 14-16. In addition to providing key information about each organ, we have created an interactive quiz they can use to test their knowledge. Each organ comes with its own page that has a diagram  and a bullet point list of key take aways about the organ. 
         </ParaText>
         <HeaderTwo>Contributers</HeaderTwo>
         <SubHeader>We are a team of hardworking individuals from diverse backgrounds</SubHeader>
         <FlexContainer>
         
 
-        
             {eachPerson}
 
        
+        
 
         </FlexContainer>
 
@@ -78,3 +87,6 @@ const AboutUs = ({contributers}) => {
 }
  
 export default AboutUs;
+
+
+

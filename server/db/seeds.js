@@ -102,8 +102,8 @@ db.bodyparts.insertMany(
     db.contributers.insertMany([
         {
             name: "Sara Qureshi",
-            Hometown: "Redditch, just outside Birmingham, England",
-            FavouriteFood: "Too many to choose from! Depends on the cuisine.",
+            Hometown: "Redditch, England",
+            FavouriteFood: "Too many to choose from!.",
             MoreInfo: "Portfolio URL comes here" 
         },
         {            
@@ -115,7 +115,7 @@ db.bodyparts.insertMany(
         {
             name: "Takako Onozuka",
             Hometown: "Niigata, Japan",
-            FavouriteFood: "My current favourite is Korean cuisine",
+            FavouriteFood: "Korean cuisine",
             MoreInfo: "Watch this space" 
 
         }
