@@ -10,6 +10,7 @@ import Header from "../Components/Re-usable/Header.js";
 
 import { getContributers } from "../Components/ContributersService.js";
 import AboutUs from "../Components/AboutUs.js";
+import AboutUs2 from "../Components/AboutUs2.js";
 
 
 const OrgansContainer = () => {
@@ -42,7 +43,7 @@ const OrgansContainer = () => {
                     <Route path="/:id/quiz" element={<Quiz/>}/>
 
                     <Route exact path="/AboutUs" element={<AboutUs contributers = {contributers}/>}/>
-
+                    <Route exact path="/AboutUs2" element={<AboutUs2 contributers = {contributers}/>}/>
 
                 </Routes>
                 

@@ -6,7 +6,6 @@ const Header = () => {
     const Header = styled.header`
     background-color: #8A2BE2; 
     color: white;
-    font-family: Helvetica;
 
   `
 
@@ -16,7 +15,7 @@ const Header = () => {
     margin: 0;
     padding-left: 30px;
     padding-bottom: 10px;
-    font-family: Helvetica;
+
   `
 
   return (
