@@ -44,6 +44,9 @@ const NavBar = () => {
                 <li>
                     <Link to="/AboutUs">About Us</Link>
                 </li>
+                <li>
+                    <Link to="/cards">Icons</Link>
+                </li>
                 
                 </NavList>
             </ul>

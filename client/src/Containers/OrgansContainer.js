@@ -9,6 +9,7 @@ import Quiz from "../Components/Quiz.js";
 import Header from "../Components/Re-usable/Header.js";
 import Footer from "../Components/Footer.js";
 import Video from "../Components/Video.js";
+import Icons from "../Components/Icons.js";
 
 import { getContributers } from "../Components/ContributersService.js";
 import AboutUs from "../Components/AboutUs.js";
@@ -46,7 +47,7 @@ const OrgansContainer = () => {
                 <Route path="/:id/quiz" element={<Quiz />} />
                 <Route exact path="/AboutUs" element={<AboutUs contributers = {contributers}/>}/>
                 <Route path="/:id/video" element={<Video/>}/>
-                   
+                <Route path="/cards" element={<Icons organs={organs}/>}/>   
              </Routes>
              <Footer></Footer> 
         </Router>

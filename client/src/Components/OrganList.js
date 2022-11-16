@@ -6,6 +6,7 @@ import { organById } from './OrgansService.js'
 import { useParams } from "react-router-dom";
 import OrganSelect from "./OrganSelect";
 import Heading from "./Heading";
+import Icons from "./Icons";
 
 const InputImg = styled.input`
 height: 35px;
@@ -40,11 +41,14 @@ const OrganList = ({ organs }) => {
             <ButtonDiv key={organ._id}>
                 <Link to={organ._id}>
                     <InputImg type="image" value={organ._id} name={organ.id} src={organ.icon} />
-
+                
                 </Link>
+                
                 <Paragraph>{organ.name}</Paragraph>
 
-            </ButtonDiv>)
+            </ButtonDiv>
+            
+            )
     })
 
 
