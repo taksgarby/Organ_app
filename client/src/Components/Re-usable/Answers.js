@@ -18,6 +18,7 @@ const Answers = ({quiz, number, handleButtonClick}) => {
     }
    }
 
+  
 
     return ( 
         <>
