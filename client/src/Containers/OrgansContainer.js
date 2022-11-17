@@ -47,7 +47,7 @@ const OrgansContainer = () => {
                 <Route path="/:id/video" element={<Video/>}/>
                 <Route path="/" element={<Icons organs={organs}/>}/>   
              </Routes>
-             <Footer></Footer> 
+             <Footer/>
         </Router>
     );
 }

@@ -25,17 +25,17 @@ const OrganSelect = () => {
     return (
         <div>
             <Heading text={`Welcome to ${organ.name} Page`} />
+              <div>
+                  <h2>{organ.name} Diagram</h2>
+
+                  <Diagram diagram={organ.diagram}/>
+
+                  <BulletPoints facts={organ.facts} />
+
+              </div>
             <div>
-                <h2>{organ.name} Diagram</h2>
-                <Diagram diagram={organ.diagram}/>
-
-                <BulletPoints facts={organ.facts} />
-
-            </div>
-            <div>
-
-            <Link to={`/${organ._id}/video`}><Button text="Watch Video"/></Link>
-            <Link to={`/${organ._id}/quiz`}><Button text="Start Quiz"/></Link>
+              <Link to={`/${organ._id}/video`}><Button text="Watch Video"/></Link>
+              <Link to={`/${organ._id}/quiz`}><Button text="Start Quiz"/></Link>
             </div>
         </div>
     );

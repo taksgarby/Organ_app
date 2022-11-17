@@ -9,6 +9,9 @@ const Footer = () => {
     font-size: 0.6em;
     padding: 2em;
     margin-top: 2em;
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
   `
 
     return (
