@@ -26,7 +26,7 @@ const OrganSelect = () => {
         <div>
             <Heading text={`Welcome to ${organ.name} Page`} />
             <div>
-                <h2>{organ.name}</h2>
+                <h2>{organ.name} Diagram</h2>
                 <Diagram diagram={organ.diagram}/>
 
                 <BulletPoints facts={organ.facts} />
