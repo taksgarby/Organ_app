@@ -137,3 +137,19 @@ db.bodyparts.insertMany(
         }
     ]
     )
+
+    db.marks.insertMany([
+        {
+            organ: "Brain",
+            totalMark: 0
+        },
+        {
+            organ: "Lungs",
+            totalMark: 0
+        },
+        {
+            organ: "Heart",
+            totalMark: 0
+        }
+    ]
+    )

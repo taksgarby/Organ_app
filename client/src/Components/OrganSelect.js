@@ -16,7 +16,6 @@ const OrganSelect = () => {
     useEffect(() => {
         organById(id)
             .then((info) => {
-                console.log(info)
                 setOrgan(info)
             }
             )
