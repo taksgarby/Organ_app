@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { organById } from "./OrgansService.js";
+import { organById } from "./Services/OrgansService.js";
 import Heading from "./Heading.js";
 import { Link } from "react-router-dom";
 import Button from "./Re-usable/Button";

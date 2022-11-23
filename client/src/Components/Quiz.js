@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { organById } from "./OrgansService.js";
+import { organById, updateOrgans } from "./Services/OrgansService.js";
 import Questions from "./Re-usable/Questions.js";
 import Answers from "./Re-usable/Answers.js";
 import Mark from "./Mark.js";
@@ -18,19 +18,24 @@ const Quiz = () => {
 
     useEffect (() => {
         organById(id)
-        .then((info) => {
-            setQuiz(info.quiz) 
-        }
+        .then((info) => 
+            setQuiz(info.quiz) &&
+            setMark(info.marks) 
        )
+        
     }, [id, number]);
 
+    const saveMark = newMark => {
+        updateOrgans(id, {"marks":newMark})
+        }
     
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
     const handleButtonClick = (correctAnswer) => {
         if (correctAnswer === quiz[number].answer && mark < quiz.length) {
-        setMark(mark + 1)
-       }
+            setMark(mark + 1)
+        }
+       saveMark(mark);
        const updatedQuiz = [...quiz];
        const answerToUpdate = updatedQuiz[number]
        answerToUpdate.isAnswered = true;
@@ -48,7 +53,7 @@ const Quiz = () => {
         if (next < quiz.length) {
             setNumber(next);
         } else {
-            setShowMark(true)
+            setShowMark(true);
         };
 
     }

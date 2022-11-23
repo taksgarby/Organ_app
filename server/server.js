@@ -13,10 +13,15 @@ MongoClient.connect('mongodb://127.0.0.1:27017', {useUnifiedTopology: true})
             const db = client.db('organ_app')
             const bodypartsCollection = db.collection('bodyparts')
             const bodypartsRouter = createRouter(bodypartsCollection)
+
             const contributersCollection = db.collection('contributers')
             const contributersRouter = createRouter(contributersCollection)
+
+           
+
             app.use('/api/bodyparts', bodypartsRouter)
             app.use('/api/contributers', contributersRouter)
+       
            })
            .catch(console.error)
 

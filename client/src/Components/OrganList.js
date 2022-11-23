@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Re-usable/Button";
 import { Form, Link } from "react-router-dom";
 import styled from "styled-components";
-import { organById } from './OrgansService.js'
+import { organById } from './Services/OrgansService.js';
 import { useParams } from "react-router-dom";
 import OrganSelect from "./OrganSelect";
 import Heading from "./Heading";

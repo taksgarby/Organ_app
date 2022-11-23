@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Heading from "../Components/Heading.js";
-import { getOrgans, organById } from "../Components/OrgansService.js";
+import { getOrgans, organById } from "../Components/Services/OrgansService.js";
 import OrganList from "../Components/OrganList.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "../Components/NavBar.js";
@@ -11,7 +11,7 @@ import Footer from "../Components/Footer.js";
 import Video from "../Components/Video.js";
 import Icons from "../Components/Icons.js";
 
-import { getContributers } from "../Components/ContributersService.js";
+import { getContributers } from "../Components/Services/ContributersService.js";
 import AboutUs from "../Components/AboutUs.js";
 
 

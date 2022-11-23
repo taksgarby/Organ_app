@@ -27,3 +27,12 @@ export const deleteOrgans = (id) => {
         )
 }
 
+export const updateOrgans = (id, data) => {
+    return fetch(baseURL + id, {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+}
+
