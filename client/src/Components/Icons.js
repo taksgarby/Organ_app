@@ -61,7 +61,7 @@ const Icons = ({organs}) => {
         return (
             <>  
                 <Link to={organ._id}>
-                    <div>
+                    <div key={organ._id}>
                         <Card>
                             <Image src={organ.icon} alt="Organ-icon" />
                         </Card>
