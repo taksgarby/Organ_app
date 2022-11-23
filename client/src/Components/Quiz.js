@@ -29,20 +29,23 @@ const Quiz = () => {
         updateOrgans(id, {"marks":newMark})
         }
     
+    saveMark(mark);
+
     if (!quiz.length > 0) {return "Sorry loading Questions!"}
 
     const handleButtonClick = (correctAnswer) => {
         if (correctAnswer === quiz[number].answer && mark < quiz.length) {
-            setMark(mark + 1)
+            let add = mark + 1;
+            setMark(add) 
         }
-       saveMark(mark);
+       
        const updatedQuiz = [...quiz];
        const answerToUpdate = updatedQuiz[number]
        answerToUpdate.isAnswered = true;
        const index = updatedQuiz.indexOf(answerToUpdate);
        updatedQuiz.splice(index, 1, answerToUpdate);
        setQuiz(updatedQuiz); 
-       
+  
 
      
         };
