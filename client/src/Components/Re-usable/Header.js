@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import OrgansContainer from "../../Containers/OrgansContainer";
-import { organById } from "../OrgansService";
+import { organById } from "../Services/OrgansService.js";
 
 const Header = () => {
     const Header = styled.header`

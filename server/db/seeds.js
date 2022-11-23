@@ -36,7 +36,8 @@ db.bodyparts.insertMany(
                     isAnswered: false,
                     answer: true
                 }
-            ]
+            ],
+            marks: 0,
         },
         {
             name: "Lungs",
@@ -71,7 +72,8 @@ db.bodyparts.insertMany(
                     isAnswered: false,
                     answer: true
                 }
-            ]
+            ],
+            marks: 0,
         },
 
         {
@@ -110,7 +112,9 @@ db.bodyparts.insertMany(
                 isAnswered: false,
                 answer: true
                 }
-            ]
+                
+            ],
+            marks: 0,
         }
 
     ])
@@ -138,18 +142,3 @@ db.bodyparts.insertMany(
     ]
     )
 
-    db.marks.insertMany([
-        {
-            organ: "Brain",
-            totalMark: 0
-        },
-        {
-            organ: "Lungs",
-            totalMark: 0
-        },
-        {
-            organ: "Heart",
-            totalMark: 0
-        }
-    ]
-    )

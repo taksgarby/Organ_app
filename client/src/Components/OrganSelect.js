@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getOrgans, organById } from "./OrgansService.js";
+import { getOrgans, organById } from "./Services/OrgansService.js";
 import Button from "./Re-usable/Button.js";
 import BulletPoints from "./Re-usable/BulletPoints.js";
 import { Link } from "react-router-dom";
