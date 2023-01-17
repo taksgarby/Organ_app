@@ -8,7 +8,11 @@ import OrganSelect from "./OrganSelect";
 import Heading from "./Heading";
 import Icons from "./Icons";
 
-const InputImg = styled.input`
+
+
+const OrganList = ({ organs }) => {
+
+    const InputImg = styled.input`
 height: 35px;
 padding: 2px;
 margin: 10px;
@@ -23,24 +27,22 @@ justify-content: center;
 align-item: center;
 `
 const Paragraph = styled.p`
- font-family: Helvetica;
- font-weight: Bold;
- justify-content: center;
- box-sizing: content-box;
- width: 10%;
- border: solid #f5c7f7 5px;
- padding: 10px;
+
+    font-weight: Bold;
+    justify-content: center;
+     box-sizing: content-box;
+    width: 10%;
+    border: solid #f5c7f7 5px;
+    padding: 10px;
  `
-const HeaderTwo = styled.h2`
-color: #8A2BE2;
+const HeaderTwo = styled.p`
+    
 `
 
 const Section = styled.div`
   margin-bottom: 12em;
-
+  color: gray;
 `
-
-const OrganList = ({ organs }) => {
 
     const organList = organs.map(organ => {
 
