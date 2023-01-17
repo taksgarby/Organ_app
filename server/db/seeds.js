@@ -136,7 +136,7 @@ db.bodyparts.insertMany(
             name: "Takako Onozuka",
             Hometown: "Niigata, Japan",
             FavouriteFood: "Korean cuisine",
-            MoreInfo: "Watch this space" 
+            MoreInfo: "https://www.linkedin.com/in/takako-onozuka-566b9b257/" 
 
         }
     ]
