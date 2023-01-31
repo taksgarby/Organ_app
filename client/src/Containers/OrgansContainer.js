@@ -7,7 +7,7 @@ import NavBar from "../Components/NavBar.js";
 import OrganSelect from "../Components/OrganSelect.js";
 import Quiz from "../Components/Quiz.js";
 import Header from "../Components/Re-usable/Header.js";
-import Footer from "../Components/Footer.js";
+
 import Video from "../Components/Video.js";
 import Icons from "../Components/Icons.js";
 
@@ -47,7 +47,7 @@ const OrgansContainer = () => {
                 <Route path="/:id/video" element={<Video/>}/>
                 <Route path="/" element={<Icons organs={organs}/>}/>   
              </Routes>
-             <Footer/>
+       
         </Router>
     );
 }
